@@ -1,0 +1,51 @@
+body {
+    background-color: #e0e5ec;
+    font-family: Arial, sans-serif;
+}
+
+.employee {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.employeesTable {
+    width: 80%;
+    border-collapse: collapse;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #e0e5ec;
+    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+}
+
+.employeesTable th,
+.employeesTable td {
+    padding: 15px;
+    text-align: left;
+    color: #333;
+}
+
+.employeesTable thead {
+    background-color: #f8f9fa;
+    box-shadow: inset 3px 3px 8px #bebebe, inset -3px -3px 8px #ffffff;
+}
+
+.employeesTable th {
+    font-weight: bold;
+}
+
+.employeesTable tbody tr {
+    background-color: #e0e5ec;
+    transition: all 0.3s ease;
+}
+
+.employeesTable tbody tr:hover {
+    box-shadow: inset 8px 8px 16px #bebebe, inset -8px -8px 16px #ffffff;
+    transform: translateY(-2px);
+}
+
+.employeesTable td {
+    box-shadow: inset 3px 3px 8px #bebebe, inset -3px -3px 8px #ffffff;
+    border-radius: 8px;
+}

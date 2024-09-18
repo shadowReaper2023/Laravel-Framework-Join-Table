@@ -33,7 +33,7 @@ Route::middleware('auth')->group(function () {
 
     //Product Routes
     Route::get('/products', [ProductController::class, 'productFunction'])->name('productRoutesName');
-    Route::get('/cutomers', [CustomerController::class, 'customerFunction'])->name('customerRoutesName');
+    Route::get('/customers', [CustomerController::class, 'customerFunction'])->name('customerRoutesName');
     Route::get('/orders', [OrderController::class, 'orderFunction'])->name('orderRoutesName');
     Route::get('/employees', [EmployeeController::class, 'list'])->name('employeesList');
 });

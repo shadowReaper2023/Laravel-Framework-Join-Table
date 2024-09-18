@@ -8,8 +8,8 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="employee">
-                <table class="employeesTable" id="datatables">
+            <div>
+                <table id="employeeTable">
                     <thead>
                         <tr>
                             <th>Employee Number </th>
@@ -23,18 +23,6 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($employees as $employees)
-                        <tr>
-                            <td>{{$employees->employeeNumber}}</td>
-                            <td>{{$employees->lastName}}</td>
-                            <td>{{$employees->firstName}}</td>
-                            <td>{{$employees->extension}}</td>
-                            <td>{{$employees->email}}</td>
-                            <td>{{$employees->officeCode }}</td>
-                            <td>{{$employees->reportsTo }}</td>
-                            <td>{{$employees->jobTitle}}</td>
-                        </tr>
-                        @endforeach
                     </tbody>
                 </table>
             </div>

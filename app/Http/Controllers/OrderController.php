@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class OrderController extends Controller
 {
@@ -29,7 +30,16 @@ class OrderController extends Controller
         ->get();
         if ($request->ajax()) {
             return DataTables::of($order)
-            ->make(true);
+                ->editColumn('orderDate', function ($row) {
+                    return Carbon::parse($row->orderDate)->format('M j, Y');
+                })
+                ->editColumn('shippedDate', function ($row) {
+                    return Carbon::parse($row->shippedDate)->format('M j, Y');
+                })
+                ->editColumn('requiredDate', function ($row) {
+                    return Carbon::parse($row->requiredDate)->format('M j, Y');
+                })
+                ->make(true);
         }
 
         return view('order.viewOrder');

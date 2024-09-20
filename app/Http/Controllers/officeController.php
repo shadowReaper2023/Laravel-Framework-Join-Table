@@ -16,7 +16,11 @@ class officeController extends Controller
             'e.firstName',
             'o.phone',
             'e.email',
-            'SELECT e.fisrtName, e.lastName FROM employees AS  '
+            // Subquery to fetch the name of an employee for each office
+            DB::raw("(SELECT CONCAT(emp.firstName, ' ', emp.lastName) 
+                      FROM employees AS emp 
+                      WHERE emp.employeeNumber = e.reportsTo 
+                      LIMIT 1) AS reportsTo")
         )
         ->get();
 

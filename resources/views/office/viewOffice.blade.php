@@ -2,24 +2,22 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Employees') }}
+            {{ __('Office') }}
         </h2>
     </x-slot>
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div>
-                <table id="customerTable">
+                <table id="officeTable">
                     <thead>
                         <tr>
-                            <th>Customer Number </th>
-                            <th>Customer Name</th>
+                            <th>Office Code</th>
                             <th>Last Name</th>
                             <th>First Name</th>
-                            <th>Check Number</th>
+                            <th>Phone</th>
                             <th>Email</th>
-                            <th>Country</th>
-                            <th>Manage By</th>
+                            <th>Reports To</th>
                         </tr>
                     </thead>
                     <tbody>

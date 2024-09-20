@@ -19,7 +19,8 @@ class CustomerController extends Controller
             'c.contactFirstName',
             'p.checkNumber',
             'e.email',
-            'o.country'
+            'o.country',
+            DB::raw('CONCAT(e.firstName, " ", e.lastName) AS fullName')
         )
         ->get();
 

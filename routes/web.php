@@ -5,6 +5,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\officeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,7 +36,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/products', [ProductController::class, 'productFunction'])->name('productRoutesName');
     Route::get('/customers', [CustomerController::class, 'customerFunction'])->name('customerRoutesName');
     Route::get('/orders', [OrderController::class, 'orderFunction'])->name('orderRoutesName');
-    Route::get('/employees', [EmployeeController::class, 'list'])->name('employeesList');
+    Route::get('/employees', [EmployeeController::class, 'employeeFunction'])->name('employeesList');
+    Route::get('/office', [officeController::class, 'officeFunction'])->name('officeRoutesName');
 });
 
 require __DIR__.'/auth.php';

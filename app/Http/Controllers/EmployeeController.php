@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class EmployeeController extends Controller
 {
-    public function list(Request $request) {
+    public function employeeFunction(Request $request) {
         $employee = DB::table('employees as e')
         ->join('offices as of', 'e.officeCode', '=', 'of.officeCode')
         ->join('customers as c', 'e.employeeNumber', '=', 'c.salesRepEmployeeNumber')

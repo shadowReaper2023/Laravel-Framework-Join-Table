@@ -12,14 +12,14 @@
                 <table id="orderTable">
                     <thead>
                         <tr>
-                            <th>Price Each</th>
                             <th>Order Number</th>
-                            <th>Check Number</th>
-                            <th>Order Date</th>
-                            <th>Required Date</th>
-                            <th>shipped Date</th>
-                            <th>Quantity In Stock</th>
-                            <th>Customer Number</th>
+                            <th>Product Name</th>
+                            <th>Customer Name</th>
+                            <th>Quantity Ordered</th>
+                            <th>Price Each</th>
+                            <th>Ordered Date</th>
+                            <th>Shipped Date</th>
+                            <th>Status</th>
                         </tr>
                     </thead>
                     <tbody>

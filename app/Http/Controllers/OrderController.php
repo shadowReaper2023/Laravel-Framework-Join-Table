@@ -19,6 +19,10 @@ class OrderController extends Controller
         ->join('offices as of', 'e.officeCode', '=', 'of.officeCode')
         ->select(
             'od.priceEach',
+            'p.productName',
+            'c.customerName',
+            'od.quantityOrdered',
+            'o.status',
             'od.orderNumber',
             'pm.checkNumber',
             'o.orderDate',
@@ -35,9 +39,6 @@ class OrderController extends Controller
                 })
                 ->editColumn('shippedDate', function ($row) {
                     return Carbon::parse($row->shippedDate)->format('M j, Y');
-                })
-                ->editColumn('requiredDate', function ($row) {
-                    return Carbon::parse($row->requiredDate)->format('M j, Y');
                 })
                 ->make(true);
         }

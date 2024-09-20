@@ -29,6 +29,7 @@ $(document).ready(function () {
             { data: 'checkNumber', name: 'checkNumber'},
             { data: 'email', name: 'email'},
             { data: 'country', name: 'country'},
+            { data: 'fullName', name: 'fullName'},
         ],
     });
     $('#orderTable').DataTable({
@@ -37,14 +38,15 @@ $(document).ready(function () {
         
         ajax: baseUrl + "/orders", // The route for server-side processing
         columns: [
-            { data: 'priceEach', name: 'priceEach'},
             { data: 'orderNumber', name: 'orderNumber'},
-            { data: 'checkNumber', name: 'checkNumber'},
+            { data: 'productName', name: 'orderNumber'},
+            { data: 'customerName', name: 'checkNumber'},
+            { data: 'quantityOrdered', name: 'quantityOrdered'},
+            { data: 'priceEach', name: 'priceEach'},
             { data: 'orderDate', name: 'orderDate'},
-            { data: 'requiredDate', name: 'requiredDate'},
             { data: 'shippedDate', name: 'shippedDate'},
-            { data: 'quantityInStock', name: 'quantityInStock'},
-            { data: 'customerNumber', name: 'customerNumber'},
+            { data: 'status', name: 'status'},
+
         ],
     });
 
@@ -62,6 +64,21 @@ $(document).ready(function () {
             { data: 'addressLine1', name: 'addressLine1'},
             { data: 'reportsTo', name: 'reportsTo'},
             { data: 'jobTitle', name: 'jobTitle'},
+        ],
+    });
+
+    $('#officeTable').DataTable({
+        processing: true,
+        serverSide: true,
+        
+        ajax: baseUrl + "/office", // The route for server-side processing
+        columns: [
+            { data: 'officeCode', name: 'officeCode'},
+            { data: 'lastName', name: 'lastName'},
+            { data: 'firstName', name: 'firstName'},
+            { data: 'phone', name: 'phone'},
+            { data: 'email', name: 'email'},
+            { data: 'reportsTo', name: 'reportsTo'},
         ],
     });
 });
